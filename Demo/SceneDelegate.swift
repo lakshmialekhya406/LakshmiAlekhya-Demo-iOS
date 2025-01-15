@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func loadController(window: UIWindow) {
         let viewController = PortfolioViewController()
-        viewController.viewModel = PortfolioVM()
+        viewController.viewModel = PortfolioViewModel()
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         self.window = window

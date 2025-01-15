@@ -13,8 +13,9 @@
 		3409D9CE2D36AA94005C0ACF /* SummView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9CD2D36AA94005C0ACF /* SummView.swift */; };
 		3409D9D02D36E7CC005C0ACF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9CF2D36E7CC005C0ACF /* NetworkManager.swift */; };
 		3409D9D72D37E00E005C0ACF /* HoldingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9D62D37E00E005C0ACF /* HoldingsResponse.swift */; };
-		3409D9D92D37E143005C0ACF /* PortfolioVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9D82D37E143005C0ACF /* PortfolioVM.swift */; };
+		3409D9D92D37E143005C0ACF /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9D82D37E143005C0ACF /* PortfolioViewModel.swift */; };
 		3409D9E12D37F74C005C0ACF /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9E02D37F74C005C0ACF /* NetworkManagerTests.swift */; };
+		3409D9E32D381973005C0ACF /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3409D9E22D381973005C0ACF /* ProfileViewModelTests.swift */; };
 		342C69482D35347D003B88DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C69472D35347D003B88DE /* AppDelegate.swift */; };
 		342C694A2D35347D003B88DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C69492D35347D003B88DE /* SceneDelegate.swift */; };
 		342C694C2D35347D003B88DE /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C694B2D35347D003B88DE /* PortfolioViewController.swift */; };
@@ -49,8 +50,9 @@
 		3409D9CD2D36AA94005C0ACF /* SummView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummView.swift; sourceTree = "<group>"; };
 		3409D9CF2D36E7CC005C0ACF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3409D9D62D37E00E005C0ACF /* HoldingsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsResponse.swift; sourceTree = "<group>"; };
-		3409D9D82D37E143005C0ACF /* PortfolioVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioVM.swift; sourceTree = "<group>"; };
+		3409D9D82D37E143005C0ACF /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
 		3409D9E02D37F74C005C0ACF /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		3409D9E22D381973005C0ACF /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
 		342C69442D35347D003B88DE /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		342C69472D35347D003B88DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		342C69492D35347D003B88DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 			children = (
 				3409D9D32D37DFAD005C0ACF /* Components */,
 				342C694B2D35347D003B88DE /* PortfolioViewController.swift */,
-				3409D9D82D37E143005C0ACF /* PortfolioVM.swift */,
+				3409D9D82D37E143005C0ACF /* PortfolioViewModel.swift */,
 			);
 			path = ProtfolioView;
 			sourceTree = "<group>";
@@ -175,6 +177,7 @@
 			children = (
 				342C695E2D35347F003B88DE /* DemoTests.swift */,
 				3409D9E02D37F74C005C0ACF /* NetworkManagerTests.swift */,
+				3409D9E22D381973005C0ACF /* ProfileViewModelTests.swift */,
 			);
 			path = DemoTests;
 			sourceTree = "<group>";
@@ -324,7 +327,7 @@
 				342C69482D35347D003B88DE /* AppDelegate.swift in Sources */,
 				3409D9C62D353BE1005C0ACF /* SegmentedControl.swift in Sources */,
 				3409D9D02D36E7CC005C0ACF /* NetworkManager.swift in Sources */,
-				3409D9D92D37E143005C0ACF /* PortfolioVM.swift in Sources */,
+				3409D9D92D37E143005C0ACF /* PortfolioViewModel.swift in Sources */,
 				3409D9D72D37E00E005C0ACF /* HoldingsResponse.swift in Sources */,
 				3409D9CE2D36AA94005C0ACF /* SummView.swift in Sources */,
 				342C694A2D35347D003B88DE /* SceneDelegate.swift in Sources */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3409D9E12D37F74C005C0ACF /* NetworkManagerTests.swift in Sources */,
+				3409D9E32D381973005C0ACF /* ProfileViewModelTests.swift in Sources */,
 				342C695F2D35347F003B88DE /* DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

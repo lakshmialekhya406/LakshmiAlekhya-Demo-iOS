@@ -19,7 +19,7 @@ class PortfolioViewController: UIViewController {
     private var isExpanded = false // Tracks the state of expandable view
     
     private var currentSegment: Int = 1 // Tracks the selected segment
-    var viewModel: PortfolioVM!
+    var viewModel: PortfolioViewModel!
     
     private let activityIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .large)

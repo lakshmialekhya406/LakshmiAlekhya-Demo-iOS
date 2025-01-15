@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class PortfolioVM: ObservableObject {
+class PortfolioViewModel: ObservableObject {
     @Published var holdings: [HoldingData] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil

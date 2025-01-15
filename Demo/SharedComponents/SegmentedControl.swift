@@ -113,19 +113,6 @@ class SegmentedControl: UIControl {
         bottomBar.backgroundColor = bottomBarColor
         bottomBar.layoutMargins   = .zero
         addSubview(bottomBar)
-        
-        // text width
-//        guard activeButtonIndex < buttons.count else { return }
-//        let selectedButton = buttons[activeButtonIndex]
-//        let textWidth = selectedButton.titleLabel?.intrinsicContentSize.width ?? 0
-//        let textXPosition = selectedButton.frame.origin.x + (selectedButton.frame.width - textWidth) / 2
-//        
-//        bottomBar = UIView(frame: CGRect(x: textXPosition,
-//                                         y: self.frame.height - bottomBarHeight,
-//                                         width: textWidth,
-//                                         height: bottomBarHeight))
-//        bottomBar.backgroundColor = bottomBarColor
-//        addSubview(bottomBar)
     }
     
     private func applyTheme() {
@@ -143,15 +130,6 @@ class SegmentedControl: UIControl {
             
             if btn == button {
                 activeButtonIndex = btnIndex
-                // text width
-//                let selectedButton = buttons[btnIndex]
-//                let textWidth = selectedButton.titleLabel?.intrinsicContentSize.width ?? 0
-//                let textXPosition = selectedButton.frame.origin.x + (selectedButton.frame.width - textWidth) / 2
-//                
-//                UIView.animate(withDuration: 0.3) {
-//                    self.bottomBar.frame.origin.x = textXPosition
-//                    self.bottomBar.frame.size.width = textWidth
-//                }
                 // whole width
                 let activeButtonXPosition = frame.width/CGFloat(buttons.count) * CGFloat(btnIndex)
                 UIView.animate(withDuration: 0.3, animations: {
