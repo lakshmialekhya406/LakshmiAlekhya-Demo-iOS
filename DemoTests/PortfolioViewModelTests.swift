@@ -11,12 +11,12 @@ import XCTest
 
 
 class PortfolioViewModelTests: XCTestCase {
-    var viewModel: PortfolioVM!
+    var viewModel: PortfolioViewModel!
     
     @MainActor
     override func setUpWithError() throws {
         try super.setUpWithError()
-        viewModel = PortfolioVM()
+        viewModel = PortfolioViewModel()
     }
 
     override func tearDownWithError() throws {

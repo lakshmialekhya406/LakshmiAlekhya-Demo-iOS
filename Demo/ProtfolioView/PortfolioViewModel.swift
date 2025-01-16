@@ -16,14 +16,25 @@ class PortfolioViewModel: ObservableObject {
     var totalInvestment: Double = 0.0
     var totalPNL: Double = 0.0
     var todaysPNL: Double = 0.0
-    let manager = NetworkManager.shared
+    let manager = PortfolioManager.shared
     
     init() {
+        fetchData()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(fetchData),
+            name: .networkReachable,
+            object: nil
+        )
+    }
+    
+    // fetch holdings data
+    @objc private func fetchData() {
         Task {
             await fetchHoldings()
         }
     }
-    
+
     func fetchHoldings() async {
         isLoading = true
         errorMessage = nil
@@ -46,6 +57,7 @@ class PortfolioViewModel: ObservableObject {
         }
     }
     
+    // computing values for summary view
     func summariseData() {
         currentValue = holdings.reduce(0) { $0 + ($1.ltp * Double($1.quantity)) }
         totalInvestment = holdings.reduce(0) { $0 + ($1.avgPrice * Double($1.quantity)) }

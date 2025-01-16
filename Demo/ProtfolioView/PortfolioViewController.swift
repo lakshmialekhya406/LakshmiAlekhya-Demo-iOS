@@ -13,7 +13,7 @@ class PortfolioViewController: UIViewController {
     // UI Components
     private let customSegmentedControl = SegmentedControl()
     private let tableView = UITableView()
-    private let expandableView = SummView()
+    private let expandableView = SummaryView()
     
     private var expandableViewHeightConstraint: NSLayoutConstraint!
     private var isExpanded = false // Tracks the state of expandable view
@@ -99,11 +99,11 @@ class PortfolioViewController: UIViewController {
         ])
         
         // Layout for expandable view
-        expandableViewHeightConstraint = expandableView.heightAnchor.constraint(equalToConstant: 80) // Initial height
+        expandableViewHeightConstraint = expandableView.heightAnchor.constraint(equalToConstant: 60) // Initial height
         NSLayoutConstraint.activate([
             expandableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             expandableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            expandableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -6),
+            expandableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             expandableViewHeightConstraint
         ])
     }
@@ -152,12 +152,12 @@ class PortfolioViewController: UIViewController {
         tableView.reloadData() // Reload the table view when the segment changes
     }
     
-    private func expandableViewTapped() {
+    @objc private func expandableViewTapped() {
         // Toggle the state of the expandable view
         isExpanded.toggle()
         
         // Update the height constraint
-        let newHeight: CGFloat = isExpanded ? 200 : 80
+        let newHeight: CGFloat = isExpanded ? 180 : 60
         
         UIView.animate(withDuration: 0.3, animations: {
             self.expandableViewHeightConstraint.constant = newHeight

@@ -1,5 +1,5 @@
 //
-//  NetworkManager.swift
+//  PortfolioManager.swift
 //  Demo
 //
 //  Created by Batchu Lakshmi Alekhya on 15/01/25.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-class NetworkManager {
-    static let shared = NetworkManager()
+class PortfolioManager {
+    static let shared = PortfolioManager()
     var baseUrlString: String? = "https://35dee773a9ec441e9f38d5fc249406ce.api.mockbin.io/"
     
     private init() {}

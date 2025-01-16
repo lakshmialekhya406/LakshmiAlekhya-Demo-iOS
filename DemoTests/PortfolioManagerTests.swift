@@ -1,5 +1,5 @@
 //
-//  NetworkManagerTests.swift
+//  PortfolioManagerTests.swift
 //  DemoTests
 //
 //  Created by Batchu Lakshmi Alekhya on 15/01/25.
@@ -8,24 +8,24 @@
 import XCTest
 @testable import Demo
 
-class NetworkManagerTests: XCTestCase {
+class PortfolioManagerTests: XCTestCase {
     
-    var networkManager: NetworkManager!
+    var manager: PortfolioManager!
     
     override func setUp() {
         super.setUp()
-        networkManager = NetworkManager.shared
+        manager = PortfolioManager.shared
     }
     
     override func tearDown() {
-        networkManager = nil
+        manager = nil
         super.tearDown()
     }
     
     func testFetchDataSuccessfully() async throws {
         let promise = expectation(description: "Data received")
         do {
-            _ = try await networkManager.fetchData()
+            _ = try await manager.fetchData()
             promise.fulfill()
         } catch {
             // Assert error
@@ -37,10 +37,10 @@ class NetworkManagerTests: XCTestCase {
     func testFetchDataWithInvalidURL() async {
         let promise = expectation(description: "Invalid url")
         // Set an invalid URL
-        NetworkManager.shared.baseUrlString = "invalid_url"
+        PortfolioManager.shared.baseUrlString = "invalid_url"
         
         do {
-            _ = try await networkManager.fetchData()
+            _ = try await manager.fetchData()
             XCTFail("Expected error for invalid URL, but succeeded")
         } catch {
             // Assert error
