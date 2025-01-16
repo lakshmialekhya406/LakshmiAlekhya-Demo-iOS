@@ -11,7 +11,7 @@ This project implements an MVVM architecture for fetching and displaying holding
 
 ## Features
 * Fetch holdings from API.
-* Displays hldings in a list format.
+* Displays holdings in a list format.
 * Handles loading states and error messages gracefully.
 
 ## Architecture
