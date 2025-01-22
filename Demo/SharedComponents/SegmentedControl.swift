@@ -2,7 +2,7 @@
 //  SegmentedControl.swift
 //  
 //
-//  Created by K Prasanna Kumar on 28/03/24.
+//  Created by Batchu Lakshmi Alekhya on 16/01/25.
 //
 
 import UIKit
